@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+/*
+  ARM Tech design system, derived from the JSJ INFOTECH "logo spectrum" language:
+  light-first canvas, midnight-navy ink for depth sections, one filled-CTA colour,
+  a gradient built from the logo stops, aurora blobs, dotted/line grids, glass + soft cards,
+  pill buttons, Space Grotesk display / Inter body / JetBrains Mono detail.
+  Logo stops: deep navy #0a1a3a, royal blue #1f5fe0, azure #1e8cf0, cyan #00c6f7.
+*/
+@theme {
+  --color-ink: #081631;
+  --color-ink-2: #0e2147;
+  --color-ink-3: #1b3470;
+  --color-paper: #ffffff;
+  --color-mist: #f4f8fe;
+  --color-line: #dfe7f4;
+  --color-text: #081631;
+  --color-muted: #475775;
+  --color-on-ink: #eaf1fc;
+  --color-on-ink-muted: #a6b6d4;
+  --color-brand: #1f5fe0;
+  --color-brand-deep: #123fa8;
+  --color-brand-hi: #7fb0ff;
+  --color-azure: #1e8cf0;
+  --color-cyan: #00b8e6;
+  --color-cyan-hi: #5fe0fa;
+  --color-ok: #0f8a5f;
+  --color-warn: #b45309;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-grotesk), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jbmono), ui-monospace, monospace;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+:root {
+  color-scheme: light;
+  --grad-brand: linear-gradient(100deg, #00b8e6 0%, #1e8cf0 34%, #1f5fe0 66%, #081631 100%);
+  --grad-brand-dark: linear-gradient(100deg, #5fe0fa 0%, #7fb0ff 45%, #b9ceff 100%);
+}
+
+html { -webkit-text-size-adjust: 100%; background: var(--color-paper); scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { background: var(--color-paper); color: var(--color-text); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+::selection { background: rgb(31 95 224 / 0.2); }
+:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; border-radius: 6px; }
+.on-ink :focus-visible { outline-color: var(--color-brand-hi); }
+
+.container-x { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: 20px; }
+@media (min-width: 768px) { .container-x { padding-inline: 28px; } }
+.section-y { padding-block: clamp(56px, 9vw, 120px); }
+
+.t-hero { font-size: clamp(2.4rem, 1.3rem + 4.8vw, 4.75rem); line-height: 1.03; letter-spacing: -0.035em; }
+.t-h2 { font-size: clamp(1.75rem, 1.2rem + 2.3vw, 3rem); line-height: 1.1; letter-spacing: -0.022em; }
+.t-lead { font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.25rem); line-height: 1.6; }
+
+.text-gradient { background: var(--grad-brand); background-size: 180% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: grad-pan 12s ease-in-out infinite alternate; }
+.on-ink .text-gradient { background-image: var(--grad-brand-dark); }
+@keyframes grad-pan { to { background-position: 100% 0; } }
+
+.spectrum-line { height: 2px; background: linear-gradient(90deg, #00b8e6, #1e8cf0, #1f5fe0, #123fa8, #081631); }
+
+.bg-lines {
+  background-image: linear-gradient(rgb(8 22 49 / 0.05) 1px, transparent 1px), linear-gradient(90deg, rgb(8 22 49 / 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 20%, transparent 70%);
+}
+.on-ink .bg-lines {
+  background-image: linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+}
+
+.aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.aurora > span { position: absolute; border-radius: 9999px; filter: blur(90px); animation: drift 24s ease-in-out infinite alternate; will-change: transform; }
+.on-ink .aurora > span { mix-blend-mode: screen; }
+@keyframes drift {
+  0% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate3d(5%, -4%, 0) scale(1.1) rotate(8deg); }
+  100% { transform: translate3d(-4%, 5%, 0) scale(0.95) rotate(-6deg); }
+}
+
+.glass { background: rgb(255 255 255 / 0.74); border: 1px solid rgb(8 22 49 / 0.08); box-shadow: 0 12px 40px -18px rgb(8 22 49 / 0.25); backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%); }
+.on-ink .glass { background: linear-gradient(180deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.03)); border-color: rgb(255 255 255 / 0.12); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.12), 0 20px 60px -30px rgb(0 0 0 / 0.7); }
+
+.card { background: #fff; border: 1px solid var(--color-line); box-shadow: 0 1px 2px rgb(8 22 49 / 0.04), 0 8px 24px -16px rgb(8 22 49 / 0.18); }
+.on-ink .card { background: rgb(255 255 255 / 0.04); border-color: rgb(255 255 255 / 0.1); box-shadow: none; }
+
+/* Pointer spotlight border (--mx/--my set by Spotlight handler) */
+.spotlight { position: relative; isolation: isolate; }
+.spotlight::before { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: -1; background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 0%), rgb(30 140 240 / 0.12), transparent 50%); opacity: 0; transition: opacity 300ms; }
+.spotlight::after { content: ''; position: absolute; inset: -1px; border-radius: inherit; z-index: 1; padding: 1px; pointer-events: none; background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 0%), #00b8e6, #1f5fe0 35%, transparent 60%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity 300ms; }
+.spotlight:hover::before, .spotlight:hover::after { opacity: 1; }
+
+.btn-glow { background: linear-gradient(135deg, #123fa8, #1f5fe0); box-shadow: 0 10px 30px -12px rgb(31 95 224 / 0.65); }
+.btn-glow:hover { background: linear-gradient(135deg, #0b2f86, #123fa8); box-shadow: 0 14px 36px -10px rgb(31 95 224 / 0.8); }
+
+.marquee { mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; width: max-content; animation: marquee 45s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+.data-path { stroke-dasharray: 6 10; animation: dash 6s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -160; } }
+
+.caret::after { content: ''; display: inline-block; width: 2px; height: 1.1em; margin-left: 2px; vertical-align: -0.15em; background: currentColor; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .marquee-track { flex-wrap: wrap; width: auto; }
+}

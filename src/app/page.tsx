@@ -22,7 +22,7 @@ export default function Home() {
             <div>
               <Eyebrow>ARM Tech · A venture from SNIST, Hyderabad</Eyebrow>
               <h1 className="t-hero font-display font-semibold text-balance">
-                Automate the busywork. <span className="text-gradient">Keep every decision.</span>
+                Building technology. Solving problems. <span className="text-gradient">Creating the future.</span>
               </h1>
               <p className="t-lead mt-6 max-w-[58ch] text-muted">
                 <strong className="font-semibold text-text">ARM Flow</strong> lets an Indian small business describe a recurring task in plain English, review a clear plan, approve sensitive steps, and let it run across Google Sheets, Gmail and WhatsApp.
@@ -31,7 +31,6 @@ export default function Home() {
                 <Button href="#prototype">Try the prototype <ArrowRight size={18} /></Button>
                 <Button href="#services" variant="secondary">What we offer</Button>
               </div>
-              <p className="mt-6 font-mono text-[13px] tracking-wide text-muted">{site.tagline}</p>
             </div>
             <Reveal delay={0.1}>
               <div className="glass rounded-[28px] p-5 sm:p-7">

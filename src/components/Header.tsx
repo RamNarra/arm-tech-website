@@ -11,10 +11,10 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="spectrum-line" />
       <div className="glass border-x-0 border-t-0">
-        <div className="container-x flex h-[76px] items-center justify-between gap-6">
+        <div className="container-x flex h-[84px] items-center justify-between gap-6">
           <a href="#top" className="flex items-center" aria-label="ARM Tech home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/arm-tech-logo.png" alt="ARM Tech" width={1087} height={433} className="h-12 w-auto sm:h-14" />
+            <img src="/arm-tech-logo.png" alt="ARM Tech" width={1087} height={433} className="h-14 w-auto sm:h-[60px]" />
           </a>
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
             {nav.map((n) => (
@@ -24,7 +24,7 @@ export function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <Button href="#prototype" className="hidden min-h-11 sm:inline-flex">Try the prototype</Button>
+            <Button href="#prototype" className="hidden min-h-11 whitespace-nowrap sm:inline-flex">Try the prototype</Button>
             <button type="button" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen((v) => !v)} className="grid size-11 place-items-center rounded-full border border-line bg-white lg:hidden">
               {open ? <X size={20} /> : <Menu size={20} />}
             </button>

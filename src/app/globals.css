@@ -48,7 +48,7 @@ body { background: var(--color-paper); color: var(--color-text); font-family: va
 @media (min-width: 768px) { .container-x { padding-inline: 28px; } }
 .section-y { padding-block: clamp(56px, 9vw, 120px); }
 
-.t-hero { font-size: clamp(2.4rem, 1.3rem + 4.8vw, 4.75rem); line-height: 1.03; letter-spacing: -0.035em; }
+.t-hero { font-size: clamp(2rem, 1rem + 2.9vw, 3.7rem); line-height: 1.06; letter-spacing: -0.03em; }
 .t-h2 { font-size: clamp(1.75rem, 1.2rem + 2.3vw, 3rem); line-height: 1.1; letter-spacing: -0.022em; }
 .t-lead { font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.25rem); line-height: 1.6; }
 

@@ -18,11 +18,11 @@ export default function Home() {
         <section id="top" className="relative overflow-hidden border-b border-line bg-mist pt-32 pb-16 md:pt-44 md:pb-24">
           <Aurora intensity={0.55} />
           <div aria-hidden className="bg-lines pointer-events-none absolute inset-0" />
-          <div className="container-x relative grid items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
+          <div className="container-x relative grid items-center gap-12 lg:grid-cols-[1.25fr_1fr]">
             <div>
               <Eyebrow>ARM Tech · A venture from SNIST, Hyderabad</Eyebrow>
               <h1 className="t-hero font-display font-semibold text-balance">
-                Building technology. Solving problems. <span className="text-gradient">Creating the future.</span>
+                <span className="block">Building technology.</span><span className="block">Solving problems.</span><span className="text-gradient block">Creating the future.</span>
               </h1>
               <p className="t-lead mt-6 max-w-[58ch] text-muted">
                 <strong className="font-semibold text-text">ARM Flow</strong> lets an Indian small business describe a recurring task in plain English, review a clear plan, approve sensitive steps, and let it run across Google Sheets, Gmail and WhatsApp.

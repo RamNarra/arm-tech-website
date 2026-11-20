@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'ARM Tech | ARM Flow: plain-English AI workflows for Indian small businesses',
   description: site.description,
   openGraph: { siteName: site.name, type: 'website', title: 'ARM Tech | ARM Flow', description: site.description, images: ['/arm-tech-logo.png'] },
-  icons: { icon: '/icon.svg' },
+  icons: { icon: '/icon.png', apple: '/icon.png' },
 };
 
 export const viewport: Viewport = { themeColor: '#081631', width: 'device-width', initialScale: 1 };

@@ -63,9 +63,9 @@ export default function Home() {
 
         {/* Stats */}
         <section aria-label="Key numbers" className="border-b border-line">
-          <div className="container-x grid grid-cols-2 gap-px bg-line md:grid-cols-4">
+          <div className="container-x grid grid-cols-2 divide-x divide-line md:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.label} className="bg-white px-4 py-8 md:px-6">
+              <div key={s.label} className="px-4 py-8 first:pl-0 md:px-6">
                 <p className="font-display text-3xl font-semibold text-brand md:text-4xl">{s.value}</p>
                 <p className="mt-1 text-[15px] font-medium text-text">{s.label}</p>
                 <p className="mt-1 text-sm text-muted">{s.note}</p>
@@ -75,14 +75,13 @@ export default function Home() {
         </section>
 
         {/* Problem */}
-        <section id="problem" className="on-ink section-y relative overflow-hidden bg-ink text-on-ink" aria-labelledby="problem-h">
-          <Aurora intensity={0.25} />
-          <div aria-hidden className="bg-lines pointer-events-none absolute inset-0" />
+        <section id="problem" className="section-y relative overflow-hidden bg-mist" aria-labelledby="problem-h">
+          
           <div className="container-x relative">
             <Reveal>
-              <Eyebrow dark>The problem</Eyebrow>
-              <H2 id="problem-h" className="max-w-4xl text-white">The owner is the human glue between five or six disconnected apps.</H2>
-              <p className="mt-5 max-w-[66ch] text-lg leading-8 text-on-ink-muted">
+              <Eyebrow>The problem</Eyebrow>
+              <H2 id="problem-h" className="max-w-4xl">The owner is the human glue between five or six disconnected apps.</H2>
+              <p className="mt-5 max-w-[66ch] text-lg leading-8 text-muted">
                 Indian small businesses lose an estimated one to two hours every working day to manual, fragmented work across email, spreadsheets, payments and chat. We asked why, five times over. These are the root causes we heard.
               </p>
             </Reveal>
@@ -90,9 +89,9 @@ export default function Home() {
               {rootCauses.map((c, i) => (
                 <Reveal key={c.title} delay={i * 0.06}>
                   <div className="card h-full rounded-3xl p-6">
-                    <p className="font-mono text-xs text-brand-hi">0{i + 1}</p>
-                    <h3 className="mt-3 font-display text-lg font-semibold text-white">{c.title}</h3>
-                    <p className="mt-2 text-[15px] leading-7 text-on-ink-muted">{c.body}</p>
+                    <p className="font-mono text-xs text-brand">0{i + 1}</p>
+                    <h3 className="mt-3 font-display text-lg font-semibold">{c.title}</h3>
+                    <p className="mt-2 text-[15px] leading-7 text-muted">{c.body}</p>
                   </div>
                 </Reveal>
               ))}

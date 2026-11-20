@@ -8,6 +8,7 @@ export const site = {
   description:
     'ARM Tech builds ARM Flow: an AI workflow automation platform where Indian small businesses describe a task in plain English, approve the plan, and let it run across Google Sheets, Gmail and WhatsApp.',
   repo: 'https://github.com/RamNarra/arm-tech-website',
+  email: 'info@armtech.com',
 };
 
 export const nav = [

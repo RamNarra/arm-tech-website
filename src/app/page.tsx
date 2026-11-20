@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Code, HandHelping, Handshake, LayoutTemplate, Plug, ShieldCheck, Sparkles, AlertTriangle, type LucideIcon } from 'lucide-react';
+import { ArrowRight, Check, Code, Mail, HandHelping, Handshake, LayoutTemplate, Plug, ShieldCheck, Sparkles, AlertTriangle, type LucideIcon } from 'lucide-react';
 import {
   site, stats, rootCauses, services, safety, stack, architecture, interviews, ratings, learnings,
   plans, market, unitEconomics, roadmap, pilot, team,
@@ -377,10 +377,10 @@ export default function Home() {
           <div className="container-x relative text-center">
             <Reveal>
               <H2 className="mx-auto max-w-3xl text-white">Want to be one of our three pilot businesses?</H2>
-              <p className="mx-auto mt-5 max-w-[56ch] text-lg leading-8 text-on-ink-muted">We are looking for small businesses with recurring customer communication in Hyderabad. Follow the build, read the code, or get in touch.</p>
+              <p className="mx-auto mt-5 max-w-[56ch] text-lg leading-8 text-on-ink-muted">We are looking for small businesses with recurring customer communication in Hyderabad. Write to us or read the code.</p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <Button href={site.repo} variant="light"><Code size={18} /> View on GitHub</Button>
-                <Button href="#prototype" variant="ghost-dark">Replay the demo</Button>
+                <Button href={`mailto:${site.email}`} variant="ghost-dark"><Mail size={18} /> {site.email}</Button>
               </div>
             </Reveal>
           </div>
@@ -392,7 +392,7 @@ export default function Home() {
         <div className="container-x flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/arm-tech-logo.webp" alt="ARM Tech" width={120} height={120} className="h-20 w-auto mix-blend-multiply" />
+            <img src="/arm-tech-logo.png" alt="ARM Tech" width={1087} height={433} className="h-24 w-auto md:h-28" />
           </div>
           <p className="max-w-[60ch] text-sm leading-6 text-muted">
             ARM Tech is a student venture developed through the Wadhwani Ignite Lite programme at the Centre for Entrepreneurship and Innovation, Sreenidhi Institute of Science and Technology, Hyderabad. Figures marked as estimates or projections are from our venture report and have not been validated at scale.

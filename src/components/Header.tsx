@@ -11,10 +11,10 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="spectrum-line" />
       <div className="glass border-x-0 border-t-0">
-        <div className="container-x flex h-[68px] items-center justify-between gap-6">
+        <div className="container-x flex h-[76px] items-center justify-between gap-6">
           <a href="#top" className="flex items-center" aria-label="ARM Tech home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/arm-tech-logo.webp" alt="ARM Tech" width={160} height={160} className="h-14 w-auto -my-2 mix-blend-multiply" />
+            <img src="/arm-tech-logo.png" alt="ARM Tech" width={1087} height={433} className="h-12 w-auto sm:h-14" />
           </a>
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
             {nav.map((n) => (

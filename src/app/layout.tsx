@@ -10,7 +10,7 @@ const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jbmono', dis
 export const metadata: Metadata = {
   title: 'ARM Tech | ARM Flow: plain-English AI workflows for Indian small businesses',
   description: site.description,
-  openGraph: { siteName: site.name, type: 'website', title: 'ARM Tech | ARM Flow', description: site.description, images: ['/arm-tech-logo.webp'] },
+  openGraph: { siteName: site.name, type: 'website', title: 'ARM Tech | ARM Flow', description: site.description, images: ['/arm-tech-logo.png'] },
   icons: { icon: '/icon.svg' },
 };
 
